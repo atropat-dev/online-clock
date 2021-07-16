@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+
+
+
+
+
+
+*, *::after, *::before, body, html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Merienda', cursive;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background: url('beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 40px 0;
+}
+
+h1 , h2{
+    text-align: center;
+    line-height: 3rem;
+    color: rgba(47, 32, 102, 0.815);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+}
+
+.clock {
+    background: rgba(236, 212, 255, 0.075);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    position: relative;
+    box-shadow:  0 0 25px rgba(47, 40, 65, 0.096);
+}
+
+.clock .number {
+    text-shadow: 0 0 2px rgba(38, 18, 102, 0.048);
+    width: 50px;
+    height: 50px;
+    --rotation: 0;
+    font-size: 2rem;
+    color: transparent;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(var(--rotation));
+        -ms-transform: rotate(var(--rotation));
+            transform: rotate(var(--rotation));
+}
+
+.clock .number1 {--rotation: 30deg;}
+.clock .number2 {--rotation: 60deg;}
+.clock .number3 {--rotation: 90deg;}
+.clock .number4 {--rotation: 120deg;}
+.clock .number5 {--rotation: 150deg;}
+.clock .number6 {--rotation: 180deg;}
+.clock .number7 {--rotation: 210deg;}
+.clock .number8 {--rotation: 240deg;}
+.clock .number9 {--rotation: 270deg;}
+.clock .number10 {--rotation: 300deg;}
+.clock .number11 {--rotation: 330deg;}
+
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+        -ms-transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+            transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    z-index: 10;
+    border-radius: 50px !important;
+}
+
+.clock::after {
+    content: '';
+    background: rgb(47, 36, 73);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    z-index: 9990;
+    
+}
+
+.secend {
+    background: rgba(52, 48, 80, 0.801);
+    -webkit-box-shadow: 0 0 3px rgba(74, 25, 102, 0.247);
+            box-shadow: 0 0 3px rgba(74, 25, 102, 0.247);
+    width: 3px;
+    height: 42%;
+}
+
+.minute {
+    background: rgba(47, 36, 73);
+    -webkit-box-shadow: 0 0 5px rgba(74, 25, 102, 0.247);
+            box-shadow: 0 0 5px rgba(74, 25, 102, 0.247);
+    width: 2%;
+    height: 34%;
+}
+
+.hour {
+    background: rgba(47, 36, 73 );
+    -webkit-box-shadow:  0 0 5px rgba(74, 25, 102, 0.247);
+            box-shadow:  0 0 5px rgba(74, 25, 102, 0.247);
+    width: 2.5%;
+    height: 25%;
+}
